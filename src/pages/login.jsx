@@ -7,7 +7,7 @@ const handleLogin = (event) => {
   localStorage.setItem("username", event.target.username.value);
   localStorage.setItem("email", event.target.email.value);
   localStorage.setItem("password", event.target.password.value);
-  window.location.href = "/localstorage-mobile/dashboard/";
+  window.location.href = "dashboard/";
 };
 
 const LoginPage = () => {

@@ -8,7 +8,7 @@ const Dashboard = () => {
     localStorage.removeItem("username");
     localStorage.removeItem("email");
     localStorage.removeItem("password");
-    window.location.href = "/localstorage-mobile/";
+    window.location.href = "/";
   };
   return (
     <div className="flex flex-col justify-center items-center min-h-screen">
