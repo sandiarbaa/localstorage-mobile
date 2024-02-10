@@ -13,7 +13,7 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
-    path: "/localstorage-mobile/dashboard",
+    path: "/localstorage-mobile/dashboard/",
     element: <Dashboard />,
   },
 ]);
