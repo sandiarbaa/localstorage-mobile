@@ -8,12 +8,12 @@ import Dashboard from "./pages/dashboard.jsx";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/localstorage-mobile/",
     element: <LoginPage />,
     errorElement: <ErrorPage />,
   },
   {
-    path: "/dashboard",
+    path: "/localstorage-mobile/dashboard",
     element: <Dashboard />,
   },
 ]);
