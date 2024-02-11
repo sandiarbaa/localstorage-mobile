@@ -1,10 +1,10 @@
 import React from "react";
 
-const Button = ({ children, style, klik }) => {
+const Button = ({ children, gaya, klik = () => {}, type = "button" }) => {
   return (
     <button
-      type="submit"
-      className={`bg-green-700 text-white ${style} rounded-md mt-2 shadow font-bold text-xl `}
+      type={type}
+      className={`bg-green-700 text-white ${gaya} rounded-md mt-2 shadow font-bold text-xl `}
       onClick={() => klik()}
     >
       {children}

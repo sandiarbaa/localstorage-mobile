@@ -14,6 +14,7 @@ const InputForm = ({ text, type, name }) => {
         className="border shadow w-full rounded-md px-4 py-2 border-green-700"
         name={name}
         id={type}
+        required
       />
     </div>
   );

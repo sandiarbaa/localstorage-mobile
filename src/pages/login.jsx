@@ -1,16 +1,29 @@
 import React from "react";
 import Button from "../components/button";
 import InputForm from "../components/input";
-
-const handleLogin = (event) => {
-  event.preventDefault();
-  localStorage.setItem("username", event.target.username.value);
-  localStorage.setItem("email", event.target.email.value);
-  localStorage.setItem("password", event.target.password.value);
-  window.location.href = "/dashboard/";
-};
+import { Link } from "react-router-dom";
 
 const LoginPage = () => {
+  // const handleLogin = (event) => {
+  //   event.preventDefault();
+  //   localStorage.setItem("username", event.target.username.value);
+  //   localStorage.setItem("email", event.target.email.value);
+  //   localStorage.setItem("password", event.target.password.value);
+  //   <Link to={"/localstorage-mobile/dashboard"} />;
+  // };
+
+  const handleLogin = (event) => {
+    event.preventDefault();
+    console.log(event.target.username.value);
+    console.log(event.target.email.value);
+    console.log(event.target.password.value);
+    localStorage.setItem("username", event.target.username.value);
+    localStorage.setItem("email", event.target.email.value);
+    localStorage.setItem("password", event.target.password.value);
+    window.location.href = "/localstorage-mobile/dashboard";
+    // <Link to={"/localstorage-mobile/dashboard"} />;
+  };
+
   return (
     <div className="flex justify-center items-center min-h-screen">
       <div className="w-[300px]">
@@ -20,7 +33,12 @@ const LoginPage = () => {
           <InputForm text="Username" type="text" name="username" />
           <InputForm text="Email" type="email" name="email" />
           <InputForm text="Password" type="password" name="pasword" />
-          <Button style="w-full px-4 py-2.5">Login</Button>
+          {/* <Button style="w-full px-4 py-2.5" klik={handleLogin}>
+            Login
+          </Button> */}
+          <Button gaya="w-full px-4 py-2.5" type="submit">
+            Login
+          </Button>
         </form>
       </div>
     </div>
